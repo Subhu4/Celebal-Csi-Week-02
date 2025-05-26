@@ -31,8 +31,7 @@
   </style>
 </head>
 <body>
-
-  <h1>📝 To-Do List React App</h1>
+  <!-- Y<h1>📝 To-Do List React App</h1>
 
   <p>
     Live Demo: <a class="link" href="https://todolistcelebalcsi.netlify.app" target="_blank">https://todolistcelebalcsi.netlify.app</a>
@@ -137,6 +136,5 @@
   <p>
     Use this guide to test and verify that all features are working as intended. Report any bugs or suggest improvements via GitHub issues.
   </p>
-
 </body>
 </html>
