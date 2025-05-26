@@ -9,6 +9,7 @@
       font-family: Arial, sans-serif;
       margin: 2rem;
       line-height: 1.6;
+      background-color: #fdfdfd;
     }
     h1, h2, h3 {
       color: #2c3e50;
@@ -20,6 +21,7 @@
       background: #f4f4f4;
       padding: 2px 6px;
       border-radius: 4px;
+      font-family: monospace;
     }
     .link {
       color: #2980b9;
@@ -28,113 +30,125 @@
     .link:hover {
       text-decoration: underline;
     }
+    .section {
+      margin-bottom: 2rem;
+    }
   </style>
 </head>
 <body>
-  <!-- Y<h1>📝 To-Do List React App</h1>
 
-  <p>
-    Live Demo: <a class="link" href="https://todolistcelebalcsi.netlify.app" target="_blank">https://todolistcelebalcsi.netlify.app</a>
-  </p>
+  <h1>📝 To-Do List Component</h1>
 
-  <h2>📄 Overview</h2>
-  <p>
-    This React-based To-Do List application allows users to:
-  </p>
-  <ul>
-    <li>Add, remove, and mark tasks as completed</li>
-    <li>Sort and filter tasks</li>
-    <li>Persist data using <code>localStorage</code></li>
-  </ul>
+  <div class="section">
+    <p><strong>Live Demo:</strong> <a class="link" href="https://todolistcelebalcsi.netlify.app/" target="_blank">https://todolistcelebalcsi.netlify.app/</a></p>
+  </div>
 
-  <h2>🛠️ Prerequisites</h2>
-  <ul>
-    <li>Node.js and npm installed</li>
-    <li>To-Do List React app set up and running locally</li>
-  </ul>
+  <div class="section">
+    <h2>📄 Overview</h2>
+    <p>This document provides guidance on how to test the To-Do List component to ensure its functionality and reliability.</p>
+    <p>The To-Do List component allows users to:</p>
+    <ul>
+      <li>Add, remove, and mark tasks as completed</li>
+      <li>Sort and filter tasks</li>
+      <li>Persist data using <code>localStorage</code></li>
+    </ul>
+  </div>
 
-  <h2>✅ Test Scenarios</h2>
+  <div class="section">
+    <h2>🛠️ Prerequisites</h2>
+    <ul>
+      <li>Node.js and npm installed</li>
+      <li>The To-Do List React app set up and running locally</li>
+    </ul>
+  </div>
 
-  <h3>1. Adding a Task</h3>
-  <ul>
-    <li>Open the app</li>
-    <li>Enter a new task</li>
-    <li>Click <code>Add Task</code></li>
-  </ul>
-  <strong>Expected:</strong> Task is added and input field is cleared.
+  <div class="section">
+    <h2>✅ Test Scenarios</h2>
 
-  <h3>2. Removing a Task</h3>
-  <ul>
-    <li>Add a task (if needed)</li>
-    <li>Click <code>Remove</code> button</li>
-  </ul>
-  <strong>Expected:</strong> Task is removed from the list.
+    <h3>1. Adding a Task</h3>
+    <ul>
+      <li>Open the To-Do List application.</li>
+      <li>Enter a new task in the input field.</li>
+      <li>Click the <code>Add Task</code> button.</li>
+    </ul>
+    <p><strong>Expected Outcome:</strong> The new task should appear in the task list and the input field should be cleared.</p>
 
-  <h3>3. Marking a Task as Completed</h3>
-  <ul>
-    <li>Click on task text to toggle completion</li>
-  </ul>
-  <strong>Expected:</strong> Line-through appears; clicking again unmarks it.
+    <h3>2. Removing a Task</h3>
+    <ul>
+      <li>Add a task if none are present.</li>
+      <li>Click the <code>Remove</code> button next to the task you want to delete.</li>
+    </ul>
+    <p><strong>Expected Outcome:</strong> The selected task should be removed from the task list.</p>
 
-  <h3>4. Filtering Tasks</h3>
-  <ul>
-    <li>Add multiple tasks, mark some as completed</li>
-    <li>Use the filter dropdown</li>
-  </ul>
-  <strong>Expected:</strong>
-  <ul>
-    <li><code>All</code>: all tasks</li>
-    <li><code>Completed</code>: only completed tasks</li>
-    <li><code>Incomplete</code>: only incomplete tasks</li>
-  </ul>
+    <h3>3. Marking a Task as Completed</h3>
+    <ul>
+      <li>Add a task if none are present.</li>
+      <li>Click on the task text to mark it as completed.</li>
+    </ul>
+    <p><strong>Expected Outcome:</strong> The task text should have a line-through. Clicking again should unmark it.</p>
 
-  <h3>5. Sorting Tasks</h3>
-  <ul>
-    <li>Add tasks with different names/statuses</li>
-    <li>Use the sort dropdown: Task Name, Creation Date, Completion Status</li>
-  </ul>
-  <strong>Expected:</strong> Tasks should reorder accordingly.
+    <h3>4. Filtering Tasks</h3>
+    <ul>
+      <li>Add multiple tasks, marking some as completed.</li>
+      <li>Use the filter dropdown to select <code>All</code>, <code>Completed</code>, or <code>Incomplete</code>.</li>
+    </ul>
+    <p><strong>Expected Outcome:</strong></p>
+    <ul>
+      <li><code>All</code>: All tasks are displayed</li>
+      <li><code>Completed</code>: Only completed tasks are shown</li>
+      <li><code>Incomplete</code>: Only incomplete tasks are shown</li>
+    </ul>
 
-  <h3>6. Data Persistence</h3>
-  <ul>
-    <li>Add tasks</li>
-    <li>Refresh the page</li>
-  </ul>
-  <strong>Expected:</strong> Tasks persist using <code>localStorage</code>.
+    <h3>5. Sorting Tasks</h3>
+    <ul>
+      <li>Add multiple tasks with different names and statuses.</li>
+      <li>Use the sort dropdown (e.g., <code>Task Name</code>, <code>Creation Date</code>, <code>Completion Status</code>).</li>
+    </ul>
+    <p><strong>Expected Outcome:</strong> Tasks should reorder accordingly based on the selected sorting criteria.</p>
 
-  <h2>🧪 Manual Testing Tips</h2>
-  <ul>
-    <li>Check for empty task validation</li>
-    <li>Test across devices and browsers</li>
-    <li>Try duplicate task names</li>
-  </ul>
+    <h3>6. Data Persistence</h3>
+    <ul>
+      <li>Add multiple tasks.</li>
+      <li>Refresh the browser.</li>
+    </ul>
+    <p><strong>Expected Outcome:</strong> The tasks should persist and appear in the task list after reload using <code>localStorage</code>.</p>
+  </div>
 
-  <h2>🧷 Automated Testing (Optional)</h2>
-  <p>
-    Use <strong>Jest</strong> and <strong>React Testing Library</strong> to:
-  </p>
-  <ul>
-    <li>Test rendering of the initial component</li>
-    <li>Simulate user actions like add/remove/complete</li>
-    <li>Validate <code>localStorage</code> behavior</li>
-  </ul>
+  <div class="section">
+    <h2>🧪 Manual Testing Tips</h2>
+    <ul>
+      <li>Ensure that empty tasks cannot be added.</li>
+      <li>Verify the app works across different browsers and devices.</li>
+      <li>Test edge cases such as adding tasks with duplicate names.</li>
+    </ul>
+  </div>
 
-  <h2>🚀 Deployment</h2>
-  <p>
-    The project is deployed on <strong>Netlify</strong>: <br />
-    <a class="link" href="https://todolistcelebalcsi.netlify.app" target="_blank">https://todolistcelebalcsi.netlify.app</a>
-  </p>
-  <p>
-    To deploy your own version:
-  </p>
-  <ul>
-    <li>Build the app using <code>npm run build</code></li>
-    <li>Drag the <code>build</code> folder to Netlify or connect the GitHub repo</li>
-  </ul>
+  <div class="section">
+    <h2>🧷 Automated Testing (Optional)</h2>
+    <p>Consider writing automated tests using <code>Jest</code> and <code>React Testing Library</code>.</p>
+    <ul>
+      <li>Test component rendering and initial state.</li>
+      <li>Simulate user actions like adding/removing/completing tasks.</li>
+      <li>Verify <code>localStorage</code> behavior is working correctly.</li>
+    </ul>
+  </div>
 
-  <h2>📌 Conclusion</h2>
-  <p>
-    Use this guide to test and verify that all features are working as intended. Report any bugs or suggest improvements via GitHub issues.
-  </p>
+  <div class="section">
+    <h2>🚀 Deployment</h2>
+    <p>The project is deployed on <strong>Netlify</strong>:</p>
+    <p><a class="link" href="https://todolistcelebalcsi.netlify.app/" target="_blank">https://todolistcelebalcsi.netlify.app/</a></p>
+    <p><strong>To deploy your own version:</strong></p>
+    <ul>
+      <li>Run <code>npm run build</code></li>
+      <li>Deploy the <code>build</code> folder to Netlify</li>
+      <li>Or connect your GitHub repo to Netlify directly</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>📌 Conclusion</h2>
+    <p>Use this guide to thoroughly test and ensure all features of your To-Do List component function correctly. Log bugs and improvements through GitHub Issues or any issue tracking system you're using.</p>
+  </div>
+
 </body>
 </html>
