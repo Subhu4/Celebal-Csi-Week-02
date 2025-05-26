@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #dfe9f3, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.App {
+  text-align: center;
+}
+
+h1 {
+  color: #2a2e45;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.TodoWrapper {
+  background: #ffffff;
+  margin-top: 5rem;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+}
+
+.TodoForm {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.todo-input {
+  outline: none;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  padding: 0.65rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 300px;
+  border-radius: 6px;
+  color: #1e293b;
+  transition: border 0.3s ease-in-out;
+}
+
+.todo-input:focus {
+  border-color: #4f86f7;
+}
+
+.todo-input::placeholder {
+  color: #94a3b8;
+}
+
+.todo-btn {
+  background: #4f86f7;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.3s ease-in-out;
+}
+
+.todo-btn:hover {
+  background: #3b6cd9;
+}
+
+.Todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #edf3ff;
+  color: #1e293b;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.Todo:hover {
+  transform: scale(1.02);
+}
+
+.fa-trash {
+  margin-left: 0.75rem;
+  color: #ef4444;
+  transition: color 0.2s ease;
+}
+
+.fa-trash:hover {
+  color: #dc2626;
+}
+
+.incompleted {
+  color: #1e293b;
+  cursor: pointer;
+}
+
+.completed {
+  color: #94a3b8;
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+.error {
+  color: #ef4444;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.edit-icon,
+.delete-icon {
+  cursor: pointer;
+  margin-left: 10px;
+  color: #64748b;
+  transition: color 0.2s ease;
+}
+
+.edit-icon:hover,
+.delete-icon:hover {
+  color: #334155;
+}
