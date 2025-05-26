@@ -16,7 +16,7 @@
   </p>
 
   <h2>📸 Screenshot</h2>
-  <img src="screenshot.png" alt="To-Do List Screenshot" />
+  <img src="C:\Users\subha\OneDrive\Pictures\Screenshots\Screenshot 2025-05-26 215240.png" alt="To-Do List Screenshot" />
 
 </body>
 </html>
